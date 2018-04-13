@@ -1,0 +1,16 @@
+<app-wrapper>
+  <table class="stripped">
+    <thead>
+      <tr>
+        <th>Nome</th>
+        <th>Data de Nascimento</th>
+        <th>Banda</th>
+      </tr>
+    </thead>
+    <tr *ngFor="let musico of arrayMusicos">
+      <th><a>{{ musico.nome }}</a></th>
+      <th>{{ musico.dataNascimento }}</th>
+      <th>{{ musico.musica.banda }}</th>
+    </tr>
+  </table>
+</app-wrapper>

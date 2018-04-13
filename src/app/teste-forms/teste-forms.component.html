@@ -1,0 +1,18 @@
+<form #sidisi='ngForm' (ngSubmit)="onSubmit(sidisi)">
+
+  <div class="row">
+      <div class="input-field col s12">
+        <i class="material-icons prefix">face</i>
+        <input id="password" type="password" class="validate" required ngModel>
+        <label for="password">Password</label>
+      </div>
+    </div>
+    <div class="row">
+      <div class="input-field col s12">
+        <i class="material-icons prefix">blur_on</i>
+        <input id="email" type="password" class="validate" ngModel>
+        <label for="email">Email</label>
+      </div>
+    </div>
+    <a class="btn">SAVE FORM</a>
+</form>

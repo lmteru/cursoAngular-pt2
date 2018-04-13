@@ -1,0 +1,48 @@
+<app-wrapper>
+  <form #cadastro = "ngForm">
+    <label>Nome do Musico</label> 
+    <input type="text" name="nomeMusico" ngModel>
+    <br>
+    <label>Data de Nascimento</label>
+    <input type="text" name="dataNascimentoMusico" ngModel>
+    <br>
+      <label for='musicaSelected'>Escolha a Musica</label>
+      <select class="browser-default" name='musicaSelected' ngModel>
+        <option value="" disabled selected>Choose your option</option>
+        <option [value]="i" *ngFor = "let i of arrayMusicas">{{ i }}</option>
+      </select>
+  
+    <div style="margin: 10px 25% 10px 25%;">
+      <a class="btn center" (click) = 'submit(cadastro)'>Adiciona Musico</a>
+    </div>
+    
+  </form>
+</app-wrapper>
+
+
+<app-wrapper>
+  <div>
+    <label>CEP</label>
+    <input type="text" name="cep" (blur)="pesquisacep(cep.value, formCep)" #cep>
+  </div>
+  <br>
+  <a class="btn">Submit</a>
+  <br>
+  <br>
+  <form #formCep="ngForm">
+    <input type="text" name="logradouroFld" ngModel disabled>
+    <input type="text" name="bairroFld" ngModel disabled>
+    <input type="text" name="localidadeFld" ngModel disabled>
+    <input type="text" name="ufFld" ngModel disabled> 
+  </form>
+</app-wrapper>
+
+<app-wrapper>
+  <br>
+  <form #formIP>
+    <input type="text" name="paisFld" ngModel>
+  </form>
+  <br>
+  <a class="btn" (click)="pesquisaIP(formIP)">BUSCA PAIS</a>
+  <br>
+</app-wrapper>

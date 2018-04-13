@@ -1,0 +1,28 @@
+<app-wrapper>
+  <label>FILTRO</label> 
+  <input [(ngModel)]="filtro" class="text" (change)="aplicaFiltro()">
+  <br>
+  <label>SELECIONE O TIPO DE FILTRO</label>
+  <select class="browser-default" [(ngModel)]="tipoFiltro">
+    <option value="" disabled selected>ESCOLHA SUA OPÇÃO</option>
+    <option *ngFor="let op of filtros" [value]="op">{{ op }}</option>
+  </select>
+</app-wrapper>
+
+<app-wrapper>
+  <table class="striped">
+    <thead>
+      <tr>
+        <th>Nome</th>
+        <th>Album</th>
+        <th>Banda</th>
+      </tr>
+    </thead>
+    <tr *ngFor = "let musica of arrayMusicasFiltrado">
+      <th> <a [routerLink]='["/MusicaSelecionada", musica.id]' class="purple-text">{{ musica.nome }}</a></th>
+      <th class="purple-text">{{ musica.album }}</th>
+      <th class="purple-text">{{ musica.banda }}</th>
+    </tr>
+  </table>
+</app-wrapper>
+

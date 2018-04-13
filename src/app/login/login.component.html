@@ -1,0 +1,17 @@
+<app-wrapper>
+  <h1>LOGIN</h1>
+  <label>LOGIN</label>
+  <input type="text" [(ngModel)]="login">
+  <p>{{ login }}</p>
+  <br>
+  <label>SENHA</label>
+  <input type="text" [(ngModel)]="senha">
+  <p>{{ senha }}</p>
+  <a class="btn" (click)="doLogin()">LOGIN</a>
+  <h1>{{ user }}</h1>
+</app-wrapper>
+
+<!-- 
+<app-wrapper>
+  <app-teste-forms></app-teste-forms>
+</app-wrapper> -->

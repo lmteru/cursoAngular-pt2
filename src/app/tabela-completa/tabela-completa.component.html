@@ -1,0 +1,18 @@
+<app-wrapper>
+  <table class="striped">
+    <thead>
+      <tr>
+        <th>Nome</th>
+        <th>Album</th>
+        <th>Banda</th>
+      </tr>
+    </thead>
+    <tr *ngFor = "let musica of arrayMusicas">
+      <th><a [routerLink]='["/MusicaSelecionada", musica.id]' class="purple-text">{{ musica.nome }}</a></th> 
+      <!-- nao esquecer da barra -->
+      <th class="purple-text">{{ musica.album }}</th>
+      <th class="purple-text">{{ musica.banda }}</th>
+    </tr>
+  </table>
+
+</app-wrapper>
